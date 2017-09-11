@@ -4,4 +4,4 @@ require 'dotenv'
 
 Dotenv.load
 
-require_relative '../lib/gone'
+require_relative '../lib/arrow'

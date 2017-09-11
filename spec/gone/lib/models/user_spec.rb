@@ -1,4 +1,4 @@
-describe Gone::Models::User, type: :model do
+describe Arrow::Models::User, type: :model do
   let(:user) { create(:user) }
 
   it 'requires an email' do

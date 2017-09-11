@@ -1,4 +1,4 @@
-module Gone
+module Arrow
   module Models
     class User
       include Mongoid::Document

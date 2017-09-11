@@ -1,4 +1,4 @@
-describe Gone::Models::Trip do
+describe Arrow::Models::Trip do
   let(:trip) { create(:trip) }
 
   it 'requires a name' do

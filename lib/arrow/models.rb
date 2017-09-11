@@ -2,7 +2,7 @@ require 'mongoid'
 
 Mongoid.load!(File.expand_path('../../../config/mongoid.yml', __FILE__))
 
-module Gone
+module Arrow
   module Models
   end
 end

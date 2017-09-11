@@ -5,7 +5,7 @@ development:
     raise_not_found_error: false
   clients:
     default:
-      database: gone_development
+      database: arrow_development
       hosts:
         - localhost:27017
 
@@ -31,6 +31,6 @@ test:
     raise_not_found_error: false
   clients:
     default:
-      database: gone_test
+      database: arrow_test
       hosts:
         - localhost:27017

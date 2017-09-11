@@ -1,0 +1,36 @@
+development:
+  options:
+    use_utc: false
+    use_activesupport_time_zone: true
+    raise_not_found_error: false
+  clients:
+    default:
+      database: gone_development
+      hosts:
+        - localhost:27017
+
+production:
+  options:
+    use_utc: false
+    use_activesupport_time_zone: true
+    raise_not_found_error: false
+  clients:
+    default:
+      uri: "<%= ENV['MONGO_URI'] %>"
+      options:
+        max_pool_size: 25
+        max_read_retries: 30
+        read_retry_interval: 1
+        connect_timeout: 15
+        socket_timeout: 30
+
+test:
+  options:
+    use_utc: false
+    use_activesupport_time_zone: true
+    raise_not_found_error: false
+  clients:
+    default:
+      database: gone_test
+      hosts:
+        - localhost:27017

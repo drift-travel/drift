@@ -5,5 +5,6 @@ FactoryGirl.define do
 
   factory :user, class: Arrow::Models::User do
     email
+    password 'traveler'
   end
 end

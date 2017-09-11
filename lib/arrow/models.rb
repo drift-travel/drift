@@ -3,6 +3,8 @@ require 'mongoid'
 Mongoid.load!(File.expand_path('../../../config/mongoid.yml', __FILE__))
 
 module Arrow
+
+  # Includes all of the database models.
   module Models
   end
 end

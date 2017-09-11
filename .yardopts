@@ -1,0 +1,3 @@
+--protected
+--exclude node_modules/
+--plugin yard-sinatra

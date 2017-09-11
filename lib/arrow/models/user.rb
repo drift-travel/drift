@@ -1,11 +1,16 @@
+require 'bcrypt'
+
 module Arrow
   module Models
+
+    # The main user model.
     class User
       include Mongoid::Document
       include Mongoid::Timestamps
 
       store_in collection: 'users'
 
+      # The plain text password to encrypt.
       attr_accessor :password
 
       field :email, type: String
@@ -19,9 +24,14 @@ module Arrow
 
       has_many :trips
 
-      before_create :encrypt_password!, :generate_api_keys!
+      before_create :encrypt_password!, :generate_api_credentials!
       before_update :encrypt_password!, if: -> { password }
 
+      # Returns a user matching the credentials given.
+      #
+      # @param [String] _email The user's email.
+      # @param [String] _password The user's password.
+      # @return [Gone::Models::User, nil] The matching user or nil.
       def self.authenticate(_email, _password)
         user = User.find_by(email: _email)
 
@@ -32,27 +42,40 @@ module Arrow
         user
       end
 
+      # Returns a user matching the API credentials given.
+      #
+      # @param [String] _key The user's API key.
+      # @param [String] _secret The user's API secret.
+      # @return [Gone::Models::User, nil] The matching user or nil.
       def self.api_authenticate(_key, _secret)
         User.where(api_key: _key, api_secret: _secret).first
       end
 
+      # Checks if the given password matches the user's passwod.
+      #
+      # @param [String] _password The password to check.
+      # @return [TrueClass,FalseClass] Whether the password matches or not.
       def password_matches?(_password)
         password_hash == BCrypt::Engine.hash_secret(_password, password_salt)
       end
 
       private
 
+      # Encrypts the password given.
+      #
+      # @return [void]
       def encrypt_password!
         self.password_salt = BCrypt::Engine.generate_salt
         self.password_hash = password.blank? ? nil : BCrypt::Engine.hash_secret(password, self.password_salt)
       end
 
-      def generate_api_keys!
+      # Generates random API credentials.
+      #
+      # @return [void]
+      def generate_api_credentials!
         self.api_key = SecureRandom.hex(16)
         self.api_secret = SecureRandom.hex(16)
       end
-
-      has_many :trips
     end
   end
 end

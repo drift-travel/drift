@@ -8,3 +8,4 @@ module Gone
 end
 
 require_relative 'models/user'
+require_relative 'models/trip'

@@ -88,10 +88,13 @@ GEM
     slop (3.6.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    timecop (0.9.1)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     unicode-display_width (1.3.0)
     yard (0.9.9)
+    yard-mongoid (0.1.0)
+      yard (>= 0.8.4)
     yard-sinatra (1.0.0)
       yard (~> 0.7)
 
@@ -112,7 +115,9 @@ DEPENDENCIES
   rubocop
   simplecov
   sinatra
+  timecop
   yard
+  yard-mongoid
   yard-sinatra
 
 BUNDLED WITH

@@ -10,12 +10,13 @@ require 'mongoid-rspec'
 
 require 'factory_girl'
 require 'database_cleaner'
+require 'timecop'
 
 require 'pry'
 
 require_relative '../config/boot'
 
-Dir['./spec/factories/*.rb'].sort.each { |f| require f }
+Dir['./spec/factories/**/*.rb'].sort.each { |f| require f }
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods

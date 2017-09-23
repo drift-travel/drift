@@ -1,4 +1,4 @@
-describe Arrow::Models::User, type: :model do
+describe Drift::Models::User, type: :model do
   let(:user) { create(:user) }
 
   it 'requires an email' do
@@ -19,25 +19,25 @@ describe Arrow::Models::User, type: :model do
 
   describe '.authenticate' do
     it 'returns the user with the matching email and password' do
-      expect(Arrow::Models::User.authenticate(user.email, 'traveler')).to eql user
+      expect(Drift::Models::User.authenticate(user.email, 'traveler')).to eql user
     end
 
     it 'returns nil if the email does not exist' do
-      expect(Arrow::Models::User.authenticate('foo@bar.com', 'traveler')).to eql nil
+      expect(Drift::Models::User.authenticate('foo@bar.com', 'traveler')).to eql nil
     end
 
     it 'returns nil if the password does not match' do
-      expect(Arrow::Models::User.authenticate(user.email, 'foobar')).to eql nil
+      expect(Drift::Models::User.authenticate(user.email, 'foobar')).to eql nil
     end
   end
 
   describe '.api_authenticate' do
     it 'returns the user with matching api key and secret' do
-      expect(Arrow::Models::User.api_authenticate(user.api_key, user.api_secret)).to eql user
+      expect(Drift::Models::User.api_authenticate(user.api_key, user.api_secret)).to eql user
     end
 
     it 'returns nil if api key and secret do not match' do
-      expect(Arrow::Models::User.api_authenticate('foo', 'bar')).to eql nil
+      expect(Drift::Models::User.api_authenticate('foo', 'bar')).to eql nil
     end
   end
 

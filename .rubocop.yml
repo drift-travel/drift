@@ -1,2 +1,11 @@
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false

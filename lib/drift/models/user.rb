@@ -1,6 +1,6 @@
 require 'bcrypt'
 
-module Arrow
+module Drift
   module Models
 
     # The main user model.

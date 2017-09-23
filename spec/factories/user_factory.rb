@@ -1,9 +1,9 @@
 FactoryGirl.define do
   sequence :email do |n|
-    "ernest#{n}@arrow.travel"
+    "ernest#{n}@drift.travel"
   end
 
-  factory :user, class: Arrow::Models::User do
+  factory :user, class: Drift::Models::User do
     email
     password 'traveler'
   end

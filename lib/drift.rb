@@ -1,5 +1,5 @@
 # The main module containing all business logic.
-module Arrow
+module Drift
 end
 
-require_relative 'arrow/models'
+require_relative 'drift/models'

@@ -11,6 +11,10 @@ gem 'bcrypt'
 
 group :development, :test do
   gem 'pry'
+
+  gem 'yard'
+  gem 'yard-mongoid'
+  gem 'yard-sinatra'
 end
 
 group :test do
@@ -21,10 +25,8 @@ group :test do
 
   gem 'database_cleaner'
   gem 'factory_girl'
+  gem 'timecop'
 
   gem 'rubocop'
   gem 'simplecov'
-
-  gem 'yard'
-  gem 'yard-sinatra'
 end

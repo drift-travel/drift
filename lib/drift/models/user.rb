@@ -8,6 +8,8 @@ module Drift
       include Mongoid::Document
       include Mongoid::Timestamps
 
+      include Drift::Concerns::Decoratable
+
       store_in collection: 'users'
 
       # The plain text password to encrypt.

@@ -2,12 +2,16 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 
+gem 'activesupport'
+
 gem 'dotenv'
 gem 'rake'
 
 gem 'mongoid', '~> 6.2.1'
 
 gem 'bcrypt'
+
+gem 'draper'
 
 group :development, :test do
   gem 'pry'

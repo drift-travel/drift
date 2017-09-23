@@ -2,4 +2,6 @@
 module Drift
 end
 
+require_relative 'drift/concerns'
 require_relative 'drift/models'
+require_relative 'drift/decorators'

@@ -1,6 +1,8 @@
 describe Drift::Models::Trip do
   let(:trip) { create(:trip) }
 
+  it_behaves_like 'decoratable'
+
   it 'requires a name' do
     expect(trip).to validate_presence_of :name
   end

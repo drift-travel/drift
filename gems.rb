@@ -15,6 +15,8 @@ gem 'pundit'
 
 gem 'draper'
 
+gem 'active_interaction'
+
 group :development, :test do
   gem 'pry'
 

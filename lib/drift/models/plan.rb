@@ -4,6 +4,9 @@ module Drift
     # The parent model for all plan types.
     class Plan
       include Mongoid::Document
+      include Mongoid::Timestamps
+
+      include Drift::Concerns::Decoratable
 
       store_in collection: 'plans'
 

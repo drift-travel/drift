@@ -23,6 +23,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_interaction (3.5.2)
+      activemodel (>= 4, < 6)
     activemodel (5.1.4)
       activesupport (= 5.1.4)
     activemodel-serializers-xml (1.0.2)
@@ -140,6 +142,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_interaction
   activesupport
   bcrypt
   database_cleaner

@@ -4,6 +4,9 @@ module Drift
     # The main trip model.
     class Trip
       include Mongoid::Document
+      include Mongoid::Timestamps
+
+      include Drift::Concerns::Decoratable
 
       store_in collection: 'trips'
 

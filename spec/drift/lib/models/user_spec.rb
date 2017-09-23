@@ -1,6 +1,8 @@
 describe Drift::Models::User, type: :model do
   let(:user) { create(:user) }
 
+  it_behaves_like 'decoratable'
+
   it 'requires an email' do
     expect(user).to validate_presence_of :email
   end

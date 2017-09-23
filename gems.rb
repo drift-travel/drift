@@ -11,6 +11,8 @@ gem 'mongoid', '~> 6.2.1'
 
 gem 'bcrypt'
 
+gem 'pundit'
+
 gem 'draper'
 
 group :development, :test do

@@ -5,3 +5,4 @@ end
 require_relative 'drift/concerns'
 require_relative 'drift/models'
 require_relative 'drift/decorators'
+require_relative 'drift/policies'

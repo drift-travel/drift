@@ -76,6 +76,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -147,6 +149,7 @@ DEPENDENCIES
   mongoid (~> 6.2.1)
   mongoid-rspec!
   pry
+  pundit
   rack-test
   rake
   rspec

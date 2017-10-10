@@ -1,0 +1,28 @@
+.button
+  background: $color-grey
+  border: none
+  border-radius: $border-radius
+  box-sizing: border-box
+  color: $color-white
+  display: inline-block
+  font-size: $font-size-n1
+  font-weight: $font-weight-semibold
+  padding: rhythm(0.15) rhythm(0.5)
+
+  &:hover
+    background: $color-grey-dark
+
+  &--icon
+    &:before
+      vertical-align: middle
+      font-size: $font-size-n3
+      margin-right: rhythm(0.25)
+
+  &--small
+    font-size: $font-size-n2
+
+  &--blue
+    background: $color-blue
+
+    &:hover
+      background: $color-blue-dark

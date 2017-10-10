@@ -1,0 +1,9 @@
+.page
+  %section
+    %header
+      %h2 Upcoming Trips
+      %nav
+        %a.button.button--blue.button--icon.ss-plus(href='/trips/new') New Trip
+    .tiled-grid
+      - @trips.each do |trip|
+        %trip-item{'v-bind:trip' => trip.to_json.html_safe}

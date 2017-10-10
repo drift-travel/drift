@@ -1,0 +1,23 @@
+.page
+  & > section
+    +container
+
+    margin-top: rhythm(1)
+
+    header
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-column: 1 / 13
+
+      h2
+        grid-column: 1 / 2
+
+      nav
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        grid-column: 2 / 3
+        text-align: right
+
+    & > div
+      grid-column: 1 / 13

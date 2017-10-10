@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'sinatra-router'
+gem 'sinatra-contrib'
+gem 'sinatra-flash'
+gem 'sinatra_warden'
+
+gem 'puma'
 
 gem 'activesupport'
 
@@ -15,7 +21,11 @@ gem 'pundit'
 
 gem 'draper'
 
+gem 'oj'
+
 gem 'active_interaction'
+
+gem 'haml'
 
 group :development, :test do
   gem 'pry'
@@ -23,6 +33,8 @@ group :development, :test do
   gem 'yard'
   gem 'yard-mongoid'
   gem 'yard-sinatra'
+
+  gem 'foreman'
 end
 
 group :test do

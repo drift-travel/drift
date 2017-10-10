@@ -1,0 +1,18 @@
+.standalone
+  %header.standalone__header
+    %h1.logo
+      %a(href='/')
+        Rover
+  %main.standalone__content
+    %form.form(action='/sessions' method='post')
+      .form__field
+        %label.form__label(for='f_email') Email
+        %input.form__input(id='f_email' name='email' type='email' placeholder='you@carto.travel')
+      .form__field
+        %label.form__label(for='f_password') Password
+        %input.form__input(id='f_password' name='password' type='password')
+      .form__footer
+        .form__footer__nav
+          %a(href='#') Forgot your password?
+        .form__footer__action
+          %button.button.button--blue.button--small(type='submit') Login

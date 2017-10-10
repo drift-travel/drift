@@ -1,0 +1,1 @@
+%trip{'v-bind:trip' => @trip.to_json.html_safe, 'v-bind:plans' => Oj.dump(@trip.plans_by_date).html_safe}

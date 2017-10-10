@@ -1,0 +1,13 @@
+=font-smoothing($value: antialiased)
+  @if $value == antialiased
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+  @else
+    -webkit-font-smoothing: subpixel-antialiased
+    -moz-osx-font-smoothing: auto
+
+=container
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  grid-gap: rhythm(0.5) rhythm(1)
+  margin: 0 rhythm(1)

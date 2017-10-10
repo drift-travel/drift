@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :plan, class: Drift::Models::Plan do
+  factory :plan, class: Carto::Models::Plan do
     canonical_start { DateTime.now }
     trip
   end

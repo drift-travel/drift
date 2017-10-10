@@ -1,0 +1,33 @@
+.body
+  &--standalone
+    font-family: $font-family-sans-serif
+    font-size: $font-size-base
+    line-height: $line-height-base
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $color-grey-lightest
+    min-height: 100vh
+    margin: rhythm(1) 0
+
+    a
+      color: $color-text
+      text-decoration: none
+
+.standalone
+  width: 45%
+
+  .logo
+    font-weight: $font-weight-semibold
+
+  &__header
+    border-radius: $border-radius $border-radius 0 0
+    background: $color-grey-light
+    padding: rhythm(1)
+    text-align: center
+
+  &__content
+    border-radius: 0 0 $border-radius $border-radius
+    background: $color-white
+    padding: rhythm(1)

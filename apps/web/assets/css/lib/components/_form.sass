@@ -1,0 +1,43 @@
+.form
+  +container
+
+  margin: 0
+
+  &__field
+    grid-column: 1 / 13
+    margin-bottom: rhythm(0.5)
+
+  &__label
+    cursor: pointer
+    display: block
+    font-size: $font-size-n1
+    font-weight: $font-weight-semibold
+
+  &__input
+    border: 1px solid $color-grey-light
+    border-radius: $border-radius
+    box-sizing: border-box
+    display: block
+    font-family: $font-family-sans-serif
+    font-size: $font-size-0
+    line-height: $line-height-normal
+    outline: none
+    padding: rhythm(0.25) rhythm(0.5)
+    width: 100%
+
+    &:focus
+      border-color: $color-grey-darkest
+
+  &__footer
+    grid-column: 1 / 13
+    display: flex
+
+    &__nav, &__action
+      flex: 1
+
+    &__nav
+      font-size: $font-size-n1
+      line-height: rhythm(1.25)
+
+    &__action
+      text-align: right

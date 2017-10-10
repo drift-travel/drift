@@ -1,11 +1,11 @@
 development:
   options:
     use_utc: false
-    use_activesupport_time_zone: true
+    use_activesupport_time_zone: false
     raise_not_found_error: false
   clients:
     default:
-      database: drift_development
+      database: carto_development
       hosts:
         - localhost:27017
 
@@ -31,6 +31,6 @@ test:
     raise_not_found_error: false
   clients:
     default:
-      database: drift_test
+      database: carto_test
       hosts:
         - localhost:27017

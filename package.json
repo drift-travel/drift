@@ -1,0 +1,39 @@
+{
+  "name": "carto",
+  "version": "0.1.0",
+  "description": "Where do you want to go?",
+  "main": "webpack.config.js",
+  "repository": "git@github.com:carto-travel/carto.git",
+  "author": "Ethan Turkeltaub <ethan@carto.travel>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --progress --colors --watch",
+    "build": "NODE_ENV=production webpack"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "moment-range": "^3.0.3",
+    "moment-timezone": "^0.5.13",
+    "vue": "^2.4.4",
+    "vuex": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.2",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0"
+  }
+}

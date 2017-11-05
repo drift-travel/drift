@@ -6,6 +6,7 @@ require_relative 'carto/policies'
 require_relative 'carto/extensions'
 require_relative 'carto/helpers'
 require_relative 'carto/interactions'
+require_relative 'carto/graphql'
 
 require_relative '../apps/web'
 

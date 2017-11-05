@@ -1,6 +1,17 @@
 .page
   %section
+    %header
+      %h2 Start planning out your trip
     %form.form(action='/trips' method='post')
       .form__field
-        %label.form__label(for='f_name') Name
+        %label.form__label(for='f_name') Trip Name
         %input.form__input(id='f_name' name='trip[name]' type='text')
+      .form__field
+        %label.form__label(for='f_start_date') Start Date
+        %input.form__input(id='f_start_date' name='trip[start_date]' type='date' value="#{Date.today}")
+      .form__field
+        %label.form__label(for='f_end_date') End Date
+        %input.form__input(id='f_end_date' name='trip[end_date]' type='date' value="#{Date.today}")
+      .form__footer
+        .form__footer__action
+          %button.button.button--blue.button--small(type='submit') Save

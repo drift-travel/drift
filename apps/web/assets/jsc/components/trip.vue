@@ -1,11 +1,8 @@
 <template>
   <div class="trip">
-    <header>
-      <h2>{{ trip.name }}</h2>
-      <p>{{ trip.start_date | formatDate }} &ndash; {{ trip.end_date | formatDate }}</p>
-    </header>
+    <trip-header v-bind:trip="trip"></trip-header>
     <section>
-      <day v-for="date in dates" v-bind:date="date" v-bind:plans="plansForDate(date)"></day>
+      <day v-for="date in dates" v-bind:trip="trip" v-bind:date="date" v-bind:plans="plansForDate(date)"></day>
     </section>
   </div>
 </template>
@@ -18,12 +15,15 @@
 
   const moment = extendMoment(Moment);
 
+  import TripHeader from './trip/header.vue';
+
   import Day from './day.vue';
 
+  Vue.component('trip-header');
   Vue.component('day');
 
   export default {
-    components: { Day },
+    components: { TripHeader, Day },
 
     props: {
       trip: Object,
@@ -51,14 +51,5 @@
 </script>
 
 <style lang="sass" scoped>
-  @import "~css/_base.sass"
-
-  header
-    background-image: url(/assets/img/trip-banner-example.jpg), radial-gradient(rgba(65, 65, 65, 0.35), rgba(65, 65, 65, 0.4))
-    background-size: cover
-    background-position: center center
-    background-blend-mode: multiply
-    color: $color-white
-    text-align: center
-    padding: rhythm(3) 0
+  
 </style>

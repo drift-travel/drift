@@ -4,15 +4,17 @@ require 'sinatra/router'
 
 require_relative 'base'
 
+require_relative 'controllers/graphql'
 require_relative 'controllers/sessions'
 require_relative 'controllers/pages'
 require_relative 'controllers/trips'
+require_relative 'controllers/plans'
 
 module Carto
   module Web
     class App < Base
       register Sinatra::Warden
-      
+
       disable :sessions
 
       configure do
@@ -26,9 +28,11 @@ module Carto
       register Carto::Extensions::Authentication
 
       use Sinatra::Router do
+        mount GraphQL
         mount Sessions
         mount Pages
         mount Trips
+        mount Plans
       end
     end
   end

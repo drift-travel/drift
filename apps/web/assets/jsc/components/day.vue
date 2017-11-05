@@ -6,7 +6,7 @@
     <section>
       <plan v-for="plan in plans" v-bind:plan="plan"></plan>
     </section>
-    <a class="button button--small button--icon ss-plus" href="#">Add Plans</a>
+    <a class="button button--small button--icon ss-plus" :href="this.newPlanPath">Add Plans</a>
   </div>
 </template>
 
@@ -23,8 +23,15 @@
     components: { Plan },
 
     props: {
+      trip: Object,
       date: Object,
       plans: Array
+    },
+
+    computed: {
+      newPlanPath () {
+        return `/trips/${this.trip.permalink}/plans/new?date=${this.date.format('YYYY-MM-DD')}`;
+      }
     },
 
     filters: {

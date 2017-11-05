@@ -25,6 +25,8 @@ gem 'oj'
 
 gem 'active_interaction'
 
+gem 'graphql'
+
 gem 'haml'
 
 group :development, :test do

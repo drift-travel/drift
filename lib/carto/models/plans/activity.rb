@@ -10,9 +10,9 @@ module Carto
 
         private
 
-        def set_canonical_start!
-          canonical_start = start_time
-          canonical_end = end_time
+        def set_canonical_times!
+          self.canonical_start = self.start_time
+          self.canonical_end = self.end_time
         end
       end
     end

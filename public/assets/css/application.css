@@ -890,6 +890,16 @@ html:hover [class^="ss-"] {
   font-weight: 600;
   src: url("/assets/fonts/inter/Inter-UI-Bold.woff") format("woff"), url("/assets/fonts/inter/Inter-UI-Bold.woff2") format("woff2"); }
 
+@font-face {
+  font-family: 'Theinhardt';
+  font-weight: 400;
+  src: url("/assets/fonts/theinhardt/Theinhardt-Regular.woff") format("woff"), url("/assets/fonts/theinhardt/Theinhardt-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Theinhardt';
+  font-weight: 600;
+  src: url("/assets/fonts/theinhardt/Theinhardt-Medium.woff") format("woff"), url("/assets/fonts/theinhardt/Theinhardt-Medium.ttf") format("truetype"); }
+
 .button {
   background: #B3B3B3;
   border: none;
@@ -922,6 +932,8 @@ html:hover [class^="ss-"] {
   .form__field {
     grid-column: 1 / 13;
     margin-bottom: 1rem; }
+    .form__field--half {
+      grid-column: 6 / 13; }
   .form__label {
     cursor: pointer;
     display: block;

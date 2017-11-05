@@ -32,7 +32,7 @@
     props: {
       user: {
         type: Object,
-        default: {}
+        default: new Object
       }
     },
 

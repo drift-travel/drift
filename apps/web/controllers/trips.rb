@@ -8,6 +8,12 @@ module Carto
       end
 
       post '/trips' do
+        @trip = Carto::Interactions::Trips::Create.run!(
+          current_user: current_user,
+          trip: params[:trip]
+        )
+
+        redirect "/trips/#{@trip.permalink}"
       end
 
       get '/trips/new' do

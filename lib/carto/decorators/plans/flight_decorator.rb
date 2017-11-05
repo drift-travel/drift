@@ -6,14 +6,6 @@ module Carto
       class FlightDecorator < PlanDecorator
         def to_hash
           attrs = super
-          attrs['segments'] = segments.map { |s| s.decorate.to_hash }
-          attrs
-        end
-      end
-
-      class FlightSegmentDecorator < BaseDecorator
-        def to_hash
-          attrs = super
           attrs['type'] = 'flight'
           attrs['description'] = "#{airline}#{number} from #{departure_location} to #{arrival_location}"
           attrs

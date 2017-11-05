@@ -1,15 +1,17 @@
 describe Carto::Models::Plans::Flight, type: :model do
   let(:flight) { create(:flight) }
 
-  it 'embeds many segments' do
-    expect(flight).to embed_many :segments
+  around(:each) do |example|
+    Timecop.freeze(Time.now, &example)
   end
 
-  describe Carto::Models::Plans::Flight::FlightSegment, type: :model do
-    let(:segment) { flight.segments.first }
+  describe '#set_canoncial_times' do
+    it 'sets the canonical start' do
+      expect(flight.canonical_start).to eql flight.departure_time
+    end
 
-    it 'is embedded in a flight' do
-      expect(segment).to be_embedded_in :flight
+    it 'sets the canonical end' do
+      expect(flight.canonical_end).to eql flight.arrival_time
     end
   end
 end

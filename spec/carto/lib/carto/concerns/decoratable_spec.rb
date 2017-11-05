@@ -12,4 +12,10 @@ shared_examples_for 'decoratable' do
       expect(model.decorator_class.ancestors).to include Draper::Decorator
     end
   end
+
+  describe '#decorate' do
+    it 'initializes the decorator' do
+      expect(model.new.decorate).to be_an_instance_of model.decorator_class
+    end
+  end
 end

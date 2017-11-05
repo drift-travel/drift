@@ -1,11 +1,5 @@
 FactoryGirl.define do
   factory :flight, class: 'Carto::Models::Plans::Flight', parent: :plan do
-    after(:build) do |flight, evaluator|
-      flight.segments << build(:flight_segment)
-    end
-  end
-
-  factory :flight_segment, class: 'Carto::Models::Plans::Flight::FlightSegment' do
     airline 'DL'
     number '1234'
     departure_location 'Bradley International Airport'

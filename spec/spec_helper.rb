@@ -3,6 +3,7 @@ ENV['RACK_ENV'] = 'test'
 require 'simplecov'
 
 SimpleCov.start
+SimpleCov.add_filter 'spec/*'
 
 require 'rspec'
 require 'rack/test'

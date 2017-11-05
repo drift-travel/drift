@@ -33,5 +33,14 @@ describe Carto::Models::Trip do
     it 'parameterizes the name' do
       expect(trip.permalink).to include 'trip-to-london'
     end
+
+    context 'if permalink is taken' do
+      let(:user) { create(:user) }
+      let(:trips) { create_list(:trip, 2, user: user) }
+
+      it 'increments a number on the end of the permalink' do
+        expect(trips.last.permalink).to eql 'trip-to-london-1'
+      end
+    end
   end
 end
